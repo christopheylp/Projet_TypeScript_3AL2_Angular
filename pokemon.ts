@@ -1,13 +1,19 @@
 interface IPokemon{
     name: string;
+    health?: number;
+    speed?: number;
 }
 
 export class Pokemon implements IPokemon {
 
     name: string;
+    health: number;
+    speed: number;
 
-    constructor(name :string) {
-        this.name = name;
+    constructor(props :IPokemon) {
+        this.name = props.name;
+        this.health = Math.floor(Math.random() * 200);
+        this.speed = Math.floor(Math.random() * 20);
     }
 
 }
