@@ -3,7 +3,7 @@ import {Pokemon} from "./pokemon";
 const pokemon1 = new Pokemon({name:"poke1"});
 const pokemon2 = new Pokemon({name:"poke2"});
 
-function firstAttack(poke1: Pokemon, poke2: Pokemon, ):Pokemon {
+export function firstAttack(poke1: Pokemon, poke2: Pokemon, ):Pokemon {
     if(poke1.speed > poke2.speed){
         return poke1;
     }
