@@ -13,7 +13,9 @@ export function runFight(p1: Pokemon, p2: Pokemon) {
         var adv = p1;
     }
     turnsFight(first, adv);
-    winner(first, adv);
+    const gagnant = winner(first, adv);
+    console.log("Le gagnant est " + gagnant.name + " avec " + gagnant.health + " points de vie.")
+
 }
 
 export function firstAttack(poke1: Pokemon, poke2: Pokemon,): Pokemon {
@@ -51,5 +53,5 @@ export function winner(p1: Pokemon, p2: Pokemon) {
     } else {
         gagnant = p2;
     }
-    console.log("Le gagnant est " + gagnant.name + " avec " + gagnant.health + " points de vie.")
+    return gagnant;
 }
