@@ -15,6 +15,7 @@ export function runFight(p1: Pokemon, p2: Pokemon) {
     turnsFight(first, adv).then(()=>{
         return winner(first, adv);
     });
+    return winner(first, adv);
 }
 
 export function firstAttack(poke1: Pokemon, poke2: Pokemon,): Pokemon {

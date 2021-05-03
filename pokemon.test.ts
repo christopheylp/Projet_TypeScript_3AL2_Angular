@@ -15,9 +15,3 @@ describe("test winner function", () => {
         expect(winner(pokemon1, pokemon2)).toBe(pokemon1);
     });
 });
-
-describe("test runFight function", () => {
-    it("should return the winner", () => {
-        expect(runFight(pokemon1, pokemon2)).toBe(pokemon1);
-    });
-});
