@@ -1,4 +1,4 @@
-import {firstAttack, winner} from "./index";
+import {firstAttack, winner, runFight} from "./index";
 import {Pokemon} from "./pokemon";
 
 const pokemon1 = new Pokemon({name: "poke1", health: 10, speed: 10});
@@ -13,5 +13,11 @@ describe("test firstAttack function", () => {
 describe("test winner function", () => {
     it("should return the winner", () => {
         expect(winner(pokemon1, pokemon2)).toBe(pokemon1);
+    });
+});
+
+describe("test runFight function", () => {
+    it("should return the winner", () => {
+        expect(runFight(pokemon1, pokemon2)).toBe(pokemon1);
     });
 });

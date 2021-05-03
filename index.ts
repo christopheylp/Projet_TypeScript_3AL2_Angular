@@ -3,7 +3,8 @@ import {Pokemon} from "./pokemon";
 const pokemon1 = new Pokemon({name: "poke1"});
 const pokemon2 = new Pokemon({name: "poke2"});
 
-runFight(pokemon1, pokemon2);
+const gagnant = runFight(pokemon1, pokemon2);
+console.log("Le gagnant est " + gagnant.name + " avec " + gagnant.health + " points de vie.")
 
 export function runFight(p1: Pokemon, p2: Pokemon) {
     const first = firstAttack(p1, p2);
@@ -13,9 +14,8 @@ export function runFight(p1: Pokemon, p2: Pokemon) {
         var adv = p1;
     }
     turnsFight(first, adv);
-    const gagnant = winner(first, adv);
-    console.log("Le gagnant est " + gagnant.name + " avec " + gagnant.health + " points de vie.")
 
+    return winner(first, adv);
 }
 
 export function firstAttack(poke1: Pokemon, poke2: Pokemon,): Pokemon {
